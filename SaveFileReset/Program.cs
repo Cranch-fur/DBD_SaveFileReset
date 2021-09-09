@@ -72,7 +72,7 @@ namespace SaveFileReset
 
 
                 Console.WriteLine($"UserID: {saveFileUserID}\n\nTrying To Inject SaveFile...");
-                string saveFileResponse = NetServices.REQUEST_POST($"https://{NetServices.Platform}.live.bhvrdbd.com/api/v1/players/me/states/binary?schemaVersion=0&stateName=FullProfile&version={(Convert.ToInt32(saveFileVersion) + 1).ToString()}", $"bhvrSession={bhvrSession}", SaveFile.EncryptSavefile(SaveFile.Ressurect_TimeStamp(Properties.Resources.OFFLINE_SAVEFILE).Replace("NONE", saveFileUserID)));
+                string saveFileResponse = NetServices.REQUEST_POST($"https://{NetServices.Platform}.live.bhvrdbd.com/api/v1/players/me/states/binary?schemaVersion=0&stateName=FullProfile&version={(Convert.ToInt32(saveFileVersion) + 1).ToString()}", $"bhvrSession={bhvrSession}", SaveFile.EncryptSavefile(SaveFile.Ressurect_All(Properties.Resources.OFFLINE_SAVEFILE, saveFileUserID)));
                 if (saveFileResponse == "ERROR")
                 {
                     Console.WriteLine("Something went wrong, make sure that bhvrSession is validated by EAC\nPress ENTER to continue...");

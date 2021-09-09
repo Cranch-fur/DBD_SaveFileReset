@@ -33,7 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CranchyLib.SaveFile">
+    <Reference Include="CranchyLib.SaveFile, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ILMerge\CranchyLibSaveFIle\CranchyLib.SaveFile.dll</HintPath>
     </Reference>
     <Reference Include="System" />
